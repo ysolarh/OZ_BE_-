@@ -10,8 +10,10 @@
 <img width="700" alt="html_03-1" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/79380985-f812-4905-8aaa-600b43830728">
 
 ##### 예제 2)
+<img width="700" alt="html_03-2" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/a5f5d50a-ec94-4fb3-98e6-19ef899032d3">
 
-### 04_회원가입을 만들기
+
+### 04_회원가입 만들기
 
 ##### 예제 1)
 <img width="700" alt="html_04-1" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/519f0263-9730-4b40-9033-57d4390ca26d">

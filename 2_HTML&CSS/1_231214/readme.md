@@ -2,7 +2,8 @@
 <img width="300" alt="html_01" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/4f7ef896-3c33-4733-aae3-f4f35b708940">
 
 ### 02_HTML을 이용해서 블로그 페이지 만들기
-![html_02](https://github.com/ysolarh/OZ_class_backend/assets/109467066/0764de86-33a0-4268-9c17-11351a052f09){: width="700"}
+![html_02](https://github.com/ysolarh/OZ_class_backend/assets/109467066/0764de86-33a0-4268-9c17-11351a052f09)
+
 
 ### 03_HTML을 이용해서 설문조사 양식 만들기
 ##### 예제 1)

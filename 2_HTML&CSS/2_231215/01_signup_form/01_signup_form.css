@@ -1,0 +1,85 @@
+* {
+    text-align: center;
+    color: #0b151d;
+    font-size: 15px;
+}
+
+html {
+    background-color: #e7dae7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    background-color: #c4afde;
+    background-clip: content-box;
+    border: 2px solid #3e3d51;
+    border-radius: 1.25rem;
+    width: 31rem;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 50px;
+    font-size: 30px
+}
+.signup-form {
+    margin: 30px 50px 55px 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.user_info, .phone, .location{
+    text-align: left;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+/* .phone-box {
+    margin: 0;
+    padding: 0;
+
+} */
+
+.phone {
+    /* text-align: center; */
+    width: 70px;
+    /* height: 30px; */
+    /* margin-bottom: 15px; */
+}
+
+/* .auth-send {
+    text-align: left;
+    margin-bottom: 3px;
+    margin-left: auto;
+}
+.auth-done {
+    text-align: right;
+} */
+
+/* .location {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+} */
+
+.gender {
+    margin-bottom: 15px;
+}
+
+.gender input {
+    width: 20px;
+    margin-bottom: 30px;
+}
+
+.sign-button {
+    width: 150px;
+    height: 50px;
+    background-color: #80768d;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}

@@ -1,8 +1,27 @@
 *{
-    text-align: center;
+    /* text-align: center; */
 }
 
 html{
     background-color: #15356d;
     color: #f3f3f3;
+}
+
+h1, .picture, .jujeori {
+    text-align: center;
+}
+
+.honeytip {
+    /* float: left; */
+    text-align: left;
+}
+
+.content {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+h3 {
+    text-align: left;
 }

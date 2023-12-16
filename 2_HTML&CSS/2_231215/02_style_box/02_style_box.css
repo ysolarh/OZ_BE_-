@@ -1,25 +1,27 @@
-*{
-    text-align: center;
-    font-family: 'Afacad', sans-serif;
-}
-
 html{
     font-size: 62.5%;
 }
 
 body{
+    font-family: 'Afacad', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
+    height: 100vh;
+    background: linear-gradient(50deg, #00233c, #00c9d5);
 }
 
 #box{
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
+    background-color: #eff6f6da;
+    color: #00233c;
+    text-align: center;
+    border: 3px solid #00233c;
+    border-radius: 0.5rem;
+    box-sizing: content-box;
     width: 200px;
     height: 90px;
+    padding: 10px;
     line-height: 90px;
     position: absolute;
     transform: translate(-50%, -50%);

@@ -1,4 +1,76 @@
-html{
+* {
+    /* text-align: center; */
+}
+
+html {
     background-color: #c6d3ff;
     color: #152747;
+}
+
+body {
+}
+
+#title {
+    /* border-bottom: 1px solid #152747; */
+    width: 500px;
+    /* padding-bottom: 10px; */
+    /* margin: 0 auto; */
+    text-align: right;
+    margin-right: 50px;
+    margin-left: 300px;
+    padding-top: 50px;
+    /* float: left; */
+}
+
+hr {
+    clear: both;
+    background: #152747;
+    height: 1px;
+    border: 0;
+    /* padding-top: 5px; */
+}
+
+.day {
+    border: 1px solid #152747;
+    border-radius: 10px;
+    width: 290px;
+    text-align: left;
+    padding: 5px 0px 0px 15px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.date {
+    text-align: center;
+}
+
+.dayinfo {
+    display: inline-block;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.image {
+    float: left;
+    padding: 50px 90px 50px 150px;
+}
+
+.content {
+    padding: 50px 150px;
+}
+
+.introduce {
+
+}
+
+.comment {
+    clear: both;
+    text-align: left;
+    border: 2px solid #152747;
+    border-radius: 10px;
+    width: 34.375rem;
+    margin: 0 auto;
+    padding: 50px;
 }

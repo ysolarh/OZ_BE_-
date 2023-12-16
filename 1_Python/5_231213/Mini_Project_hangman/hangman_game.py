@@ -24,7 +24,6 @@ class HangmanGame:
                 self.user_ans[i] = letter
         self.display(1)
 
-
     def incorrect(self):
         self.num_of_attempts -= 1
         self.display(0)

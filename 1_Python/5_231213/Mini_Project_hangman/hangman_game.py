@@ -9,6 +9,7 @@ class HangmanGame:
         self.num_of_attempts = self.max_attempts
     
     def display(self, result):
+        print(' ')
         if result == 1:
             print('맞았습니다!')
         elif result == 0:

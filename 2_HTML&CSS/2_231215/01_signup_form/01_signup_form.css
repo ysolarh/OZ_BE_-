@@ -1,103 +1,28 @@
-/* * {
-    text-align: center;
-    color: #0b151d;
-    font-size: 15px;
-}
-
-html {
-    background-color: #e7dae7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-body {
-    text-align: center;
-    background-color: #c4afde;
-    background-clip: content-box;
-    border: 2px solid #3e3d51;
-    border-radius: 1.25rem;
-    width: 31rem;
-    margin: 0 auto;
-}
-
-.title {
-    margin-top: 50px;
-    font-size: 30px
-}
-
-.signup-form {
-    margin: 30px 50px 55px 50px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.user_info, .phone, .location{
-    text-align: left;
-    width: 300px;
-    height: 30px;
-    margin-bottom: 15px;
-}
-
-.phone {
-    width: 70px;
-}
-
-.gender {
-    margin-bottom: 15px;
-}
-
-.gender input {
-    width: 20px;
-    margin-bottom: 30px;
-}
-
-.sign-button {
-    width: 150px;
-    height: 50px;
-    background-color: #80768d;
-    border-radius: 10px;
-    margin-bottom: 50px;
-} */
-
 * {
-    text-align: center;
     color: #0b151d;
-    font-size: 15px;
 }
 
 html {
     background-color: #e7dae7;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0; */
     height: 100%;
 }
 
 body {
-    /* text-align: center; */
     background-color: #c4afde;
     background-clip: content-box;
     border: 2px solid #3e3d51;
     border-radius: 1.25rem;
-    width: 470px;
-
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0 auto;
-    /* max-width: 31rem; */
-    /* height: auto; */
-    /* min-height: 100vh; */
+    margin: 10vh auto 10vh;
 }
 
 .title {
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .signup {
@@ -105,24 +30,27 @@ body {
 }
 
 .signup-form {
-    /* margin: 30px 50px 55px 50px; */
-    /* margin: 0 auto; */
     max-width: 400px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    /* margin-top: 50px; */
 }
 
 .user_info, .phone, .location{
     text-align: left;
-    width: 300px;
-    height: 30px;
+    width: 30vw;
+    height: 35px;
+    margin: auto;
     margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 2px 1px;
+    font-size: 15px;
 }
 
 .phone {
-    width: 70px;
+    width: 7vw;
+    text-align: center;
 }
 
 .gender {
@@ -138,6 +66,13 @@ body {
     width: 150px;
     height: 50px;
     background-color: #80768d;
-    border-radius: 10px;
+    border-radius: 70px;
     margin-bottom: 50px;
+    border: none;
+    box-shadow: 0px 0px 3px 1px ;
+    font-size: 20px;
+}
+
+.sign-button:hover {
+    background-color:#c4afde;
 }

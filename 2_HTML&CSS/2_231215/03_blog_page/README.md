@@ -1,0 +1,1 @@
+![03_blog_page](https://github.com/ysolarh/OZ_class_backend/assets/109467066/02bd1c6d-a55c-4806-8535-0c7677647368)

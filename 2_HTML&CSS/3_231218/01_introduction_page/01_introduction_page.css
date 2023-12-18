@@ -23,6 +23,7 @@ body {
     width: 100%;
     background-color: var(--color5);
     border-radius: 20px;
+    overflow: scroll;
 }
 .sidebar__section {
     float: left;

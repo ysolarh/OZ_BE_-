@@ -1,0 +1,65 @@
+:root {
+    --color1: #136b7f;
+    --color2: #198496;
+    --color3: #4aa0b0;
+    --color4: #a9d2e6;
+    --color5: #fefdfb;
+    --color6: #552511;
+    --color7: #e0691e;
+}
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--color1);
+}
+.container {
+    height: 100%;
+    background-color: var(--color2);
+    border-radius: 50%;
+}
+.snowman {
+    width: 35vw;
+    height: 100vh;
+    /* background-color: var(--color3); */
+    margin: auto;
+}
+.face {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: var(--color5);
+    box-shadow: 10px -10px 10px 0px var(--color4) inset;
+    margin: 0 auto;
+    position: relative;
+    top: 150px;
+    z-index: 1;
+}
+.upper-body {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: var(--color5);
+    box-shadow: 20px -30px 10px 0px var(--color4) inset;
+    margin: 0 auto;
+    position: relative;
+    top: 130px;
+    z-index: 2
+}
+.lower-body {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: var(--color5);
+    box-shadow: 30px -30px 10px 0px var(--color4) inset;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+    z-index: 3;
+}

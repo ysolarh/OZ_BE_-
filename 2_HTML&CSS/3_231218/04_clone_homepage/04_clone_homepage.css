@@ -14,15 +14,41 @@ body {
 }
 .header__inner {
     height: 55px;
+    /* display: flex; */
+    /* jutify-content: flex-start; */
+    padding: 19px 30px 19px 30px;
 }
 .header__logo {
     float: left;
 }
 .header__utility {
+    display: flex;
     float: right;
+    font-size: 17px;
 }
-.banner__sec {
+.header__search {
+    /* margin: 0 30px 0 30px; */
+}
+.header__cart {
+
+}
+.banner {
     clear: both;
+    position: relative;
+}
+.banner__arrows {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 225px;
+    width: calc(100% - 60px);
+    margin: 0 30px 0 30px;
+}
+.banner__left {
+    float: left;
+}
+.banner__right {
+    float: right;
 }
 .banner__img {
     height: 405px;
@@ -33,3 +59,20 @@ body {
     width: 960px;
     object-fit: cover;
 }
+.banner__text {
+    position: absolute;
+    bottom: 655px;
+    left: 70px;
+    color: white;
+}
+.banner__title {
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+}
+.banner__copy {
+    font-size: 14px;
+    padding: 0;
+    margin: 7px 0 30px 0;
+}
+

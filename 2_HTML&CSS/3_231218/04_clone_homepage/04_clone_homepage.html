@@ -7,6 +7,9 @@
   <title>홈페이지 클론하기</title>
   <link rel="stylesheet" href="04_clone_homepage.css">
   <script src="https://kit.fontawesome.com/e7bb2c0cba.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -49,12 +52,12 @@
         </div>
       </section>
       <section class="product__sec">
-        <div class="product__nav">
-          <input type="button" value="HolidaySale" class="product__menu">
-          <input type="button" value="새로운 갤럭시" class="product__menu">
-          <input type="button" value="12월의 특별 혜택" class="product__menu">
-          <input type="button" value="삼닷 번개특가" class="product__menu">
-          <input type="button" value="Samsung Experience" class="product__menu">
+        <div class="product__navi">
+          <div class="product__menu"><input type="button" value="HolidaySale"></div>
+          <div class="product__menu"><input type="button" value="새로운 갤럭시"></div>
+          <div class="product__menu"><input type="button" value="12월의 특별 혜택"></div>
+          <div class="product__menu"><input type="button" value="삼닷 번개특가"></div>
+          <div class="product__menu"><input type="button" value="Samsung Experience"></div>
         </div>
         <div class="product__board">
           <div class="product__first-line">
@@ -74,20 +77,27 @@
     </main>
     <footer class="footer__navi">
       <div class="menu__bar">
-        <div class="menu__icon">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="menu__icon">
-          <i class="fa-solid fa-truck"></i>
-        </div>
-        <div class="menu__icon">
-          <i class="fa-solid fa-angles-up"></i>
-        </div>
-        <div class="menu__icon">
-          <i class="fa-regular fa-user"></i>
-        </div>
-        <div class="menu__icon">
-          <i class="fa-regular fa-clock"></i>
+        <div class="menu-bar__inner">
+          <div class="menu__icon">
+            <i class="fa-solid fa-bars"></i>
+            <p>메뉴</p>
+          </div>
+          <div class="menu__icon">
+            <i class="fa-solid fa-truck"></i>
+            <p>배송조회</p>
+          </div>
+          <div class="menu__icon">
+            <i class="fa-solid fa-angles-up"></i>
+            <p>혜택보기</p>
+          </div>
+          <div class="menu__icon">
+            <i class="fa-regular fa-user"></i>
+            <p>나의 정보</p>
+          </div>
+          <div class="menu__icon">
+            <i class="fa-regular fa-clock"></i>
+            <p>최근 본 제품</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,1 +1,1 @@
-<img width="533" alt="03_chat_room" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/2428c1b6-6179-4517-8bf0-7173ffad13de">
+<img width="522" alt="03_chat_room" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/299fb6b4-4d83-49b0-a4bc-910fe0cf60f6">

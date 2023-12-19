@@ -1,3 +1,4 @@
+<p>이미지 안보일 경우 주석 링크로 바꾸기</p>
 <p align="center">
     <img width="30%" alt="04_참고용" src="https://github.com/ysolarh/OZ_class_backend/assets/109467066/f55c4363-a512-40ea-b5c8-d4b21c266d03">
     --->

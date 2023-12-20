@@ -43,7 +43,7 @@ body {
 .header__nav ul li {
     display: inline-block;
     padding: 15px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 .header__nav ul li.home {
     background-color: #4DAE4F;
@@ -59,22 +59,17 @@ body {
         width: 49.5px;
         margin: auto;
     }
-    /* .header__content {
-        justify-content: center;
-        flex-direction: column;
-    } */
     .hamburger__icon:hover, .hamburger__icon:active{
         background-color: #4DAE4F;
         border-radius: 2px;
-        /* color: black; */
     }
     .hamburger__icon:active ~ .header__nav {
         display: block;
         width: 100%;
-        /* flex-direction: column; */
         text-align: center;
     }
-    .hamburger__icon:active ~ .header__nav ul li {
+    .hamburger__icon:active ~ .header__nav ul li{
         width: 100%;
+        border-top: 1px solid gray;
     }
 }

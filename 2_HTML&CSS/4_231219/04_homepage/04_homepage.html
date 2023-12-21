@@ -5,9 +5,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>홈페이지</title>
-  <link rel="stylesheet" href="04_homepage.css">
+  <link rel="stylesheet" href="04_homepage_header.css">
+  <link rel="stylesheet" href="04_homepage_main.css">
 </head>
 <body>
-  
+  <div class="container">
+    <header class="header">
+      <section class="header__content">
+        <div class="header__content__img">
+          <img src="./images/do.jpg">
+        </div>
+        <div class="header__content__title">
+          <p>오늘도 화이팅!</p>
+        </div>
+      </section>
+
+      <section class="header__nav">
+        <div class="header__nav__box flex">
+          <div class="header__logo">OZ</div>
+          <div class="hamburger__icon">
+            <!-- <input type="button" value="&#9776;"> -->
+            <button class="hamburger__btn" type="button" onclick="clickBtn()">&#9776;</button>
+          </div>
+          <nav class="header__nav__bar flex">
+            <ul>
+              <li>오즈코딩스쿨</li>
+              <li>html</li>
+              <li>css</li>
+              <li>커리큘럼</li>
+              <li>문의사항</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="main__content flex">
+        <div class="main__intro flex">
+          <p>ABOUT</p>
+          <p>OZ 코딩스쿨</p>
+        </div>
+        <div class="main__content__box flex">
+          <div class="main__content__item">
+            <p>
+              <a href="https://ozcodingschool.com/">빠른 강의</a>
+            </p>
+          </div>
+          <div class="main__content__item">
+            <p>손쉬운 학습</p>
+          </div>
+          <div class="main__content__item">
+            <p>플레이그라운드</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  <!-- <script>
+    let hamburger = document.querySelector('.hamburger__btn')
+    function clickBtn() {
+      // hamburger.classList.toggle('.active');
+      hamburger.checked = true;
+    }
+  </script> -->
 </body>
 </html>

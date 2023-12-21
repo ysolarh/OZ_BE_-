@@ -19,7 +19,7 @@ body.active {
 }
 .carousel-wrapper {
     width: 500px;
-    height: 300px;
+    height: 325px;
     overflow: hidden;
     margin: 20px auto 10px;
     border: 2px solid white
@@ -31,12 +31,23 @@ body.active {
 }
 .carousel > .image {
     width: 500px;
-    height: 300px;
+    height: 325px;
 }
-.carousel > img {
+.carousel > .image > .number {
+    margin: 5px 30px;
+    padding: 0;
+    font-size: 15px;
+}
+.carousel > .image > .number.active {
+    margin: 5px 30px;
+    padding: 0;
+    font-size: 15px;
+    color: white;
+}
+.carousel > .image > img {
     width: 500px;
-    height: 300px;
-    object-fit: contain;
+    height: 325px;
+    object-fit: cover;
 }
 .buttons {
     margin: auto;
@@ -45,5 +56,4 @@ body.active {
     padding: 7px 11px;
     border: 1px solid black;
     border-radius: 5px;
-    /* background-color: transparent; */
 }

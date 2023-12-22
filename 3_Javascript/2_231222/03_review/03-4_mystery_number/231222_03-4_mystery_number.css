@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.container {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.form__box {
+  margin: auto;
+}

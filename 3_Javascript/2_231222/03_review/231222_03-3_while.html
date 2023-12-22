@@ -5,22 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>4의 배수</title>
+  <style>
+    .multiple {
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>4의 배수 5개씩 출력하기</h1>
+    <h2><4의 배수 5개씩 출력하기></h2>
     <div class="multiple"></div>
   </div>
 
   <script>
     const multiple = document.querySelector('.multiple');
 
-    let i = 4;
+    let i = 100;
     while (i <= 500) {
       const arr = [];
       const line = document.createElement('div');
       j = 0;
       while (j < 5) {
+        if (i > 500) 
+          break
         arr.push(i);
         i += 4;
         j += 1

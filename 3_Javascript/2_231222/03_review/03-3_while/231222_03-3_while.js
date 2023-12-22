@@ -1,6 +1,6 @@
 const multiple = document.querySelector('.multiple');
 
-let i = 100;
+let i = 4;
 while (i <= 500) {
     const arr = [];
     const line = document.createElement('div');

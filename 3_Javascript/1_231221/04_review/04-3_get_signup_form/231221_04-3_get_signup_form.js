@@ -16,6 +16,7 @@ form.onsubmit = function() {
         console.log(infoArr[i]);
     }
     console.log(`email: ${infoArr[0]}, id: ${infoArr[1]}, pw1: ${infoArr[2]}, pw2: ${infoArr[3]}, phone1: ${infoArr[4]}, phone2: ${infoArr[5]}, phone3: ${infoArr[6]}, location: ${infoArr[7]}, isWoman: ${infoArr[8]}, isMan: ${infoArr[9]}`);
+    // console.log(infoArr);
     return false;
 }
 

@@ -17,10 +17,11 @@
 }
 .main__intro > p:nth-child(2) {
   font-size: 2.5rem;
+  font-weight: 600;
   padding: 0;
   margin-bottom: 90px;
   margin-top: 50px;
-  /* color: white; */
+  color: white;
 }
 .main__content__box {
   width: 100%;

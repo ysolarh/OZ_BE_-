@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>홈페이지 클론하기</title>
-    <!-- <link rel="stylesheet" href="04_clone_homepage.css" /> -->
     <link rel="stylesheet" href="04_clone_homepage.css" />
     <script
       src="https://kit.fontawesome.com/e7bb2c0cba.js"
@@ -21,11 +20,9 @@
   <body>
     <div class="container">
       <header class="header__navi">
-        <div class="header__inner">
+        <div class="header__inner flex">
           <div class="header__logo">
-            <a
-              href="https://www.samsung.com/sec/static/_images/gnb/logo-gnb.svg"
-            >
+            <a href="https://www.samsung.com/sec/" target="_blank">
               <!-- <img src="https://www.samsung.com/sec/static/_images/gnb/logo-gnb.svg" alt="samsong"> -->
               <img src="./images/logo_samsung.svg" alt="samsong" />
             </a>
@@ -42,7 +39,7 @@
       </header>
       <main class="main">
         <section class="banner__sec">
-          <div class="banner__arrows">
+          <div class="banner__arrows flex">
             <div class="banner__left">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
@@ -53,19 +50,23 @@
           <div class="banner__img">
             <!-- <img src="https://images.samsung.com/kdp/cms_contents/324111/57619904-669e-429f-9333-ab0be404db9b.png?$ORIGIN_JPG$" class="banner__back-img"> -->
             <img src="./images/banner.webp" class="banner__back-img" />
-          </div>
-          <div class="banner__text">
-            <p class="banner__title">삼닷 페스타 Holiday Sale</p>
-            <p class="banner__copy">
-              최대 40% 할인 혜택으로 2023년 인기 제품을 만나보세요!
-            </p>
-            <div class="banner__button">
-              <input type="button" value="구매 혜택 보기" class="banner__bt" />
+            <div class="banner__text">
+              <p class="banner__title">삼닷 페스타 Holiday Sale</p>
+              <p class="banner__copy">
+                최대 40% 할인 혜택으로 2023년 인기 제품을 만나보세요!
+              </p>
+              <div class="banner__button">
+                <input
+                  type="button"
+                  value="구매 혜택 보기"
+                  class="banner__bt"
+                />
+              </div>
             </div>
           </div>
         </section>
         <section class="product__sec">
-          <div class="product__navi">
+          <div class="product__navi flex">
             <div class="product__menu">
               <input type="button" value="HolidaySale" />
             </div>
@@ -82,25 +83,35 @@
               <input type="button" value="Samsung Experience" />
             </div>
           </div>
-          <div class="product__board">
-            <div class="product__inner">
-              <div class="product__first-line">
-                <!-- <img src="https://images.samsung.com/kdp/cms_contents/322100/b0dec572-f16f-4f40-a64f-c4ddbfe70f2a.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/324113/6b6b52e4-2579-4226-955b-3034414a5f16.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/322100/0c6ecef2-c605-4fc5-a478-bde24095d1ca.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/324113/26d2b7ae-2c1a-4cf0-83d2-9a25b4deb10a.png?$330_330_PNG$"> -->
+          <div class="product__board flex">
+            <div class="product__first-line flex">
+              <div class="product__first-left">
+                <!-- <img
+                  src="https://images.samsung.com/kdp/cms_contents/322100/b0dec572-f16f-4f40-a64f-c4ddbfe70f2a.png?$330_330_PNG$"
+                />
+                <img
+                  src="https://images.samsung.com/kdp/cms_contents/324113/6b6b52e4-2579-4226-955b-3034414a5f16.png?$330_330_PNG$"
+                /> -->
                 <img src="./images/board_1.webp" />
                 <img src="./images/board_2.avif" />
+              </div>
+              <div class="product__first-right">
+                <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/637b7ed2-8ade-47ed-a9bb-b85b76d0879e.png?$330_330_PNG$">
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/83dc863b-205c-4a12-b0f9-b8915f37c817.png?$330_330_PNG$"> -->
                 <img src="./images/board_3.avif" />
                 <img src="./images/board_4.avif" />
               </div>
-              <div class="product__second-line">
+            </div>
+            <div class="product__second-line flex">
+              <div class="product__second-left">
                 <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/637b7ed2-8ade-47ed-a9bb-b85b76d0879e.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/324113/83dc863b-205c-4a12-b0f9-b8915f37c817.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/324113/dbf7848e-5c89-443b-873f-50fbc61e52e3.png?$330_330_PNG$">
-              <img src="https://images.samsung.com/kdp/cms_contents/324113/747609ae-1d03-41c1-903d-e9b24c3b1c45.png?$330_330_PNG$"> -->
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/83dc863b-205c-4a12-b0f9-b8915f37c817.png?$330_330_PNG$"> -->
                 <img src="./images/board_5.avif" />
                 <img src="./images/board_6.avif" />
+              </div>
+              <div class="product__second-right">
+                <!-- <img src="https://images.samsung.com/kdp/cms_contents/324113/dbf7848e-5c89-443b-873f-50fbc61e52e3.png?$330_330_PNG$">
+                <img src="https://images.samsung.com/kdp/cms_contents/324113/747609ae-1d03-41c1-903d-e9b24c3b1c45.png?$330_330_PNG$"> -->
                 <img src="./images/board_7.avif" />
                 <img src="./images/board_8.avif" />
               </div>

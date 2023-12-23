@@ -50,13 +50,11 @@
   font-size: 150px;
   margin: 50px 50px 30px 50px;
 }
-.main__content__item > a {
-  /* width: 210px;
-    height: 300px; */
-}
-.main__content__item > p:first-child {
-  font-size: 2rem;
-}
 .main__content__item > p:nth-child(2) {
-  font-size: 1.5rems;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.main__content__item > p:nth-child(3) {
+  font-size: 1rems;
+  margin: 10px;
 }

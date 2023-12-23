@@ -104,8 +104,17 @@ body {
   font-size: 2rem;
   padding-left: 20px;
 }
-
-@media screen and (max-width: 550px) {
+.hamburger__icon {
+  text-align: center;
+  width: 49.5px;
+  align-content: flex-end;
+}
+@media screen and (min-width: 769px) {
+  .hamburger__icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
   .header__nav__box {
     flex-wrap: wrap;
   }
@@ -114,10 +123,6 @@ body {
   }
   .hamburger__icon {
     display: block;
-    text-align: center;
-    width: 49.5px;
-    /* margin: auto; */
-    align-content: flex-end;
   }
   /* .hamburger__btn:checked {
         background-color: red;

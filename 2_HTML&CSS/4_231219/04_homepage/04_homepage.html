@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈페이지</title>
-  <link rel="stylesheet" href="04_homepage_header.css">
-  <link rel="stylesheet" href="04_homepage_main.css">
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <section class="header__content">
-        <div class="header__content__img">
-          <img src="./images/do.jpg">
-        </div>
-        <div class="header__content__title">
-          <p>오늘도 화이팅!</p>
-        </div>
-      </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="04_homepage_header.css" />
+    <link rel="stylesheet" href="04_homepage_main.css" />
+    <script
+      src="https://kit.fontawesome.com/e7bb2c0cba.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <section class="header__content">
+          <div class="header__content__img">
+            <img src="./images/do.jpg" />
+          </div>
+          <div class="header__content__title flex">
+            <p>오늘도 화이팅!</p>
+          </div>
+        </section>
 
-      <section class="header__nav">
-        <div class="header__nav__box flex">
-          <div class="header__logo">OZ</div>
-          <div class="hamburger__icon">
-            <!-- <input type="button" value="&#9776;"> -->
-            <button class="hamburger__btn" type="button" onclick="clickBtn()">&#9776;</button>
+        <section class="header__nav">
+          <div class="header__nav__box flex">
+            <div class="header__logo">OZ</div>
+            <div class="hamburger__icon">
+              <!-- <input type="button" value="&#9776;"> -->
+              <button class="hamburger__btn" type="button" onclick="clickBtn()">
+                &#9776;
+              </button>
+            </div>
+            <nav class="header__nav__bar flex">
+              <ul>
+                <li>오즈코딩스쿨</li>
+                <li>html</li>
+                <li>css</li>
+                <li>커리큘럼</li>
+                <li>문의사항</li>
+              </ul>
+            </nav>
           </div>
-          <nav class="header__nav__bar flex">
-            <ul>
-              <li>오즈코딩스쿨</li>
-              <li>html</li>
-              <li>css</li>
-              <li>커리큘럼</li>
-              <li>문의사항</li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-    </header>
-    <main class="main">
-      <section class="main__content flex">
-        <div class="main__intro flex">
-          <p>ABOUT</p>
-          <p>OZ 코딩스쿨</p>
-        </div>
-        <div class="main__content__box flex">
-          <div class="main__content__item">
-            <p>
-              <a href="https://ozcodingschool.com/">빠른 강의</a>
-            </p>
+        </section>
+      </header>
+      <main class="main">
+        <section class="main__content flex">
+          <div class="main__intro flex">
+            <p>ABOUT</p>
+            <p>OZ 코딩스쿨</p>
           </div>
-          <div class="main__content__item">
-            <p>손쉬운 학습</p>
+          <div class="main__content__box flex">
+            <div
+              class="main__content__item flex"
+              onclick="window.open('https://ozcodingschool.com/');"
+            >
+              <i class="fa-solid fa-bolt-lightning"></i>
+              <p>
+                <a href="https://ozcodingschool.com/">빠른 강의</a>
+              </p>
+              <p>
+                군더더기 없는 진행으로<br />
+                여러번의 시간을 절약합니다.
+              </p>
+            </div>
+            <div class="main__content__item flex">
+              <i class="fa-solid fa-laptop-code"></i>
+              <p>손쉬운 학습</p>
+              <p>
+                강의 페이지를 활용해서<br />
+                편리하게 실습할 수 있습니다.
+              </p>
+            </div>
+            <div class="main__content__item flex">
+              <i class="fa-solid fa-gamepad"></i>
+              <p>플레이그라운드</p>
+              <p>
+                강의를 위해 제작한 도구가<br />
+                반복학습을 도와줍니다.
+              </p>
+            </div>
           </div>
-          <div class="main__content__item">
-            <p>플레이그라운드</p>
-          </div>
-        </div>
-
-      </section>
-    </main>
-  </div>
-  <!-- <script>
+        </section>
+      </main>
+    </div>
+    <!-- <script>
     let hamburger = document.querySelector('.hamburger__btn')
     function clickBtn() {
       // hamburger.classList.toggle('.active');
       hamburger.checked = true;
     }
   </script> -->
-</body>
+  </body>
 </html>

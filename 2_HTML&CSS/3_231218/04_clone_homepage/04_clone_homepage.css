@@ -4,9 +4,11 @@
 }
 html {
   height: 100%;
+  width: 100%;
 }
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
 }
 .flex {
@@ -14,10 +16,13 @@ body {
 }
 .container {
   height: 100%;
+  width: 100%;
   background-color: #ffffff;
 }
 .header__inner {
   height: 55px;
+  width: 100%;
+  justify-content: space-between;
 }
 .header__logo {
   float: left;
@@ -32,36 +37,33 @@ body {
 .header__search {
   margin-right: 25px;
 }
-.banner {
+.banner__sec {
   clear: both;
   position: relative;
 }
 .banner__arrows {
   position: absolute;
+  top: 175px;
+  justify-content: space-between;
   font-size: 50px;
   color: white;
-  top: 225px;
   width: calc(100% - 60px);
   margin: 0 30px 0 30px;
-}
-.banner__left {
-  float: left;
-}
-.banner__right {
-  float: right;
+  z-index: 1;
 }
 .banner__img {
   height: 405px;
-  width: 960px;
+  width: 100%;
+  position: relative;
 }
 .banner__back-img {
   height: 405px;
-  width: 960px;
+  width: 100%;
   object-fit: cover;
 }
 .banner__text {
   position: absolute;
-  bottom: 655px;
+  top: 150px;
   left: 100px;
   color: white;
 }
@@ -85,14 +87,13 @@ body {
   border: none;
 }
 .product__navi {
-  width: 876px;
+  width: 100%;
   text-align: center;
-  margin: auto;
-  display: flex;
+  justify-content: center;
 }
 .product__menu {
   padding: 0 20px 0 20px;
-  margin: 40px auto 15px;
+  margin: 35px 5px;
 }
 .product__menu input {
   border: none;
@@ -105,22 +106,19 @@ body {
 }
 .product__board {
   width: 100%;
-  position: relative;
-  margin: auto;
-}
-.product__inner {
-  position: absolute;
-  transform: translate(-50%, 0);
-  left: 50%;
+  flex-direction: column;
+  align-items: center;
 }
 .product__first-line,
 .product__second-line {
   display: flex;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 .product__board img {
-  width: 211px;
-  height: 211px;
+  width: 20rem;
+  height: 20rem;
   padding: 7px;
   border-radius: 20px;
   z-index: 1;
@@ -134,11 +132,13 @@ body {
   border-radius: 16px 16px 0 0;
   box-shadow: 0px -5px 10px 0 rgb(0, 0, 0, 0.3);
   position: fixed;
-  top: 908px;
+  top: calc(100% - 60px);
   z-index: 110;
 }
 .menu-bar__inner {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
   margin: 10px auto;
 }
 .menu__icon {

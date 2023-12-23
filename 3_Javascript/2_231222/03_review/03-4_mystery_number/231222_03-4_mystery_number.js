@@ -5,7 +5,7 @@ const randNum = Math.floor(Math.random() * 100 + 1);
 
 function clickBtn() {
   const inputNum = document.querySelector(".input__num").value;
-  inputIntNum = parseInt(inputNum);
+  let inputIntNum = parseInt(inputNum);
 
   if (inputIntNum > 100 || inputIntNum < 0) {
     hint[0].style.display = "none";

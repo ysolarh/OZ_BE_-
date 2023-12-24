@@ -11,6 +11,7 @@
   margin-bottom: 7rem;
   justify-content: space-between;
   margin-right: 2.61rem;
+  flex-wrap: wrap;
 }
 .footer__nav__left span:nth-child(1) {
   font-weight: 900;

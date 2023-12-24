@@ -42,10 +42,17 @@
   cursor: pointer;
 }
 .main__content__item:hover {
-  width: 330px;
+  /* width: 330px;
   height: 425px;
-  margin: 10px calc(3.5vw - 10px) 55px;
-  transition: 200ms;
+  margin: 10px calc(3.5vw - 10px) 55px; */
+  transform: scale(1.1);
+  transition: 150ms;
+}
+.main__content__box:hover > .main__content__item:not(:hover) {
+  /* backdrop-filter: blur(100px); */
+  /* -webkit-backdrop-filter: blur(100px); */
+  -webkit-filter: blur(1.5px);
+  opacity: 70%;
 }
 .main__content__item > i {
   font-size: 150px;

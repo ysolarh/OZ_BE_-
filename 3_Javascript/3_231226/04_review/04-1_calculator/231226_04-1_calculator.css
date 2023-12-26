@@ -20,12 +20,13 @@ body {
 }
 .container {
   margin: auto;
-  width: 31rem;
+  width: 25rem;
   height: 31rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color4);
+  border-radius: 10px;
 }
 h1 {
   color: var(--color1);
@@ -33,12 +34,14 @@ h1 {
 tr {
   width: 90%;
 }
-input {
+.result {
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: var(--color2);
   border: none;
   border-radius: 10px;
+  outline: none;
+  text-align: right;
 }
 td > button {
   background-color: var(--color1);
@@ -47,4 +50,5 @@ td > button {
   height: 50px;
   border-radius: 10px;
   font-size: 1.5rem;
+  cursor: pointer;
 }

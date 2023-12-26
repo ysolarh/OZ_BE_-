@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>달각달각 계산기</title>
+    <link rel="stylesheet" href="231226_04-1_calculator.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <h1>My Calculator</h1>
+      <form id="form" action="#">
+        <table>
+          <tr>
+            <input name="result" type="number" />
+          </tr>
+          <tr>
+            <td><button name="seven" type="button" value="7">7</button></td>
+            <td><button name="eight" type="button" value="8">8</button></td>
+            <td><button name="nine" type="button" value="9">9</button></td>
+            <td><button name="multiply" type="button" value="x">x</button></td>
+          </tr>
+          <tr>
+            <td><button name="four" type="button" value="4">4</button></td>
+            <td><button name="five" type="button" value="5">5</button></td>
+            <td><button name="six" type="button" value="6">6</button></td>
+            <td>
+              <button name="divide" class="operator" type="button" value="/">
+                /
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><button name="one" type="button" value="1">1</button></td>
+            <td><button name="two" type="button" value="2">2</button></td>
+            <td><button name="three" type="button" value="3">3</button></td>
+            <td>
+              <button name="subtract" class="operator" type="button" value="-">
+                -
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td><button name="clear" type="button" value="C">C</button></td>
+            <td><button name="zero" type="button" value="0">0</button></td>
+            <td>
+              <button name="add" class="operator" type="button" value="+">
+                +
+              </button>
+            </td>
+            <td><button type="submit" value="=">=</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script src="231226_04-1_calculator.js"></script>
+  </body>
+</html>

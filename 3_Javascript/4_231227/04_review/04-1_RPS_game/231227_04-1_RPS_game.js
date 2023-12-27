@@ -3,7 +3,14 @@ const resultDiv = document.querySelector(".result__text");
 const rps = ["가위", "바위", "보"];
 
 function printResult(result, userChoice, computer) {
-  resultDiv.textContent = `당신의 선택: ${userChoice} / 컴퓨터의 선택: ${computer} / 결과: ${result}`;
+  const emojis = {};
+  emojis["가위"] = "✌🏼";
+  emojis["바위"] = "✊🏼";
+  emojis["보"] = "✋🏼";
+
+  resultDiv.innerHTML = `당신의 선택: ${userChoice + emojis[userChoice]}<br>
+  컴퓨터의 선택: ${computer + emojis[computer]}<br>
+  결과: ${result}`;
 }
 
 form.addEventListener("submit", (e) => {

@@ -9,34 +9,34 @@
   </head>
   <body>
     <div class="container flex">
-      <h1>My Calculator</h1>
-      <form id="form" action="#">
+      <h1>Calculator</h1>
+      <div class="calculator flex">
         <input type="text" class="result" />
         <div class="row">
-          <button onclick="inputNum('7')">7</button>
-          <button onclick="inputNum('8')">8</button>
-          <button onclick="inputNum('9')">9</button>
-          <button onclick="inputOp('x')">x</button>
+          <button onclick="input('7')">7</button>
+          <button onclick="input('8')">8</button>
+          <button onclick="input('9')">9</button>
+          <button onclick="input('*')">x</button>
         </div>
         <div class="row">
-          <button onclick="inputNum('4')">4</button>
-          <button onclick="inputNum('5')">5</button>
-          <button onclick="inputNum('6')">6</button>
-          <button onclick="inputOp('/')">/</button>
+          <button onclick="input('4')">4</button>
+          <button onclick="input('5')">5</button>
+          <button onclick="input('6')">6</button>
+          <button onclick="input('/')">/</button>
         </div>
         <div class="row">
-          <button onclick="inputNum('1')">1</button>
-          <button onclick="inputNum('2')">2</button>
-          <button onclick="inputNum('3')">3</button>
-          <button onclick="inputOp('-')">-</button>
+          <button onclick="input('1')">1</button>
+          <button onclick="input('2')">2</button>
+          <button onclick="input('3')">3</button>
+          <button onclick="input('-')">-</button>
         </div>
         <div class="row">
           <button onclick="inputClear()">C</button>
-          <button onclick="inputNum('0')">0</button>
-          <button onclick="inputOp('+')">+</button>
+          <button onclick="input('0')">0</button>
+          <button onclick="input('+')">+</button>
           <button onclick="inputEq()">=</button>
         </div>
-      </form>
+      </div>
     </div>
 
     <script src="231226_04-1_calculator.js"></script>

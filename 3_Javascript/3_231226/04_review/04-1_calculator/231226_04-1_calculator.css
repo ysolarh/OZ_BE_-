@@ -43,7 +43,7 @@ tr {
   outline: none;
   text-align: right;
 }
-td > button {
+button {
   background-color: var(--color1);
   border: none;
   width: 70px;
@@ -51,4 +51,5 @@ td > button {
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+  margin: 1px 1px;
 }

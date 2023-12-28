@@ -25,9 +25,9 @@
 
 function question(str) {
   // 여기에서 코드 작성해주세요!
-  const alphabet = /[a-zA-Z]/g;
-  let onlyAlphabet = str.match(alphabet);
-  return onlyAlphabet.join("").toUpperCase() === onlyAlphabet.reverse().join("").toUpperCase();
+  const alphabet = /[A-Z]/g;
+  const onlyAlphabet = str.toUpperCase().match(alphabet);
+  return onlyAlphabet.join("") === onlyAlphabet.reverse().join("");
 }
 
 // 여기는 결과값 함수이므로 신경쓰지 않으셔도 됩니다!

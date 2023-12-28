@@ -33,8 +33,36 @@ body {
   align-items: center;
   margin: 10px;
   box-shadow: inset 0 0 3px 3px rgba(50, 50, 50, 0.7);
-  position: relative;
-  z-index: 100;
+}
+#days {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+}
+.circle__progress {
+  width: 174px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  transform: rotate(-90deg);
+}
+.frame,
+.bar {
+  fill: none;
+}
+.frame {
+  stroke: #e6e6e6;
+}
+.bar {
+  stroke: #03c75a;
+  stroke-linecap: round;
 }
 
 button {

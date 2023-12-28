@@ -10,12 +10,14 @@
   <body>
     <div class="container flex">
       <div id="timer" class="timer flex">
-        <svg class="circle__progress" cx="60" cy="60" r="54" stroke-width="12">
-          <circle class="frame" cx="60" cy="60" r="54" stroke-width="12"></circle>
-          <circle class="bar" cx="60" cy="60" r="54" stroke-width="12"></circle>
-        </svg>
-
+        <div class="circle__wrap">
+          <svg class="circle__progress" cx="75" cy="75" r="75" stroke-width="12">
+            <circle class="frame" cx="75" cy="75" r="75" stroke-width="12"></circle>
+            <circle class="bar" cx="75" cy="75" r="75" stroke-width="12"></circle>
+          </svg>
+        </div>
         <div id="days" class="number"></div>
+
         <div id="hours" class="number"></div>
         <div id="minutes" class="number"></div>
         <div id="seconds" class="number"></div>

@@ -3,11 +3,14 @@ const dayDiv = document.getElementById("days");
 const hourDiv = document.getElementById("hours");
 const minDiv = document.getElementById("minutes");
 const secDiv = document.getElementById("seconds");
+const startBtn = document.querySelector(".start-btn");
+const setBtn = document.querySelector(".set-btn");
 
-function countdown() {
+function countdown(yy, mm, dd, hh) {
   const now = new Date();
-  const yearEnd = Date.parse("2024/01/01 00:00:00");
-  const diff = yearEnd - now;
+  const end = Date.parse(`${yy}/${mm}/${dd} ${hh}:00:00`);
+  const diff = end - now;
+  console.log(diff);
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const mins = Math.floor(diff / (1000 * 60));
@@ -23,4 +26,15 @@ function countdown() {
   secDiv.innerText = String(s).padStart(2, "0");
 }
 
-setInterval(countdown, 1000);
+setBtn.addEventListener("click", () => {
+  const y = prompt("년");
+  const m = prompt("월");
+  const d = prompt("일");
+  const h = prompt("시");
+
+  countdown(y, m, d, h);
+});
+
+startBtn.addEventListener("click", () => {
+  setInterval(countdown, 1000);
+});

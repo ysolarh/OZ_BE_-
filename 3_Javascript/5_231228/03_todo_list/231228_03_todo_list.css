@@ -79,3 +79,18 @@ li > .todo-del {
   text-decoration: line-through;
   text-decoration-style: wavy;
 }
+
+@media screen and (max-width: 375px) {
+  .app {
+    width: 300px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  #todo-list {
+    font-size: 20px;
+  }
+  #todo-form {
+    width: 300px;
+  }
+}

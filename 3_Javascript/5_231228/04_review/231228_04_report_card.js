@@ -1,8 +1,8 @@
 const reportTable = document.getElementById("report");
 const highScoreStH2 = document.getElementById("high-score");
-const tableValue = Array.from(reportTable.rows).slice(1);
 
-const scores = {};
+const tableValue = Array.from(reportTable.rows).slice(1);
+// const scores = {};
 const highScoreStudents = [];
 
 // tableValue -> scores

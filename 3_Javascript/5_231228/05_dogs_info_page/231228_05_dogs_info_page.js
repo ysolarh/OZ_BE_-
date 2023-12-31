@@ -1,4 +1,4 @@
-const apiRandomDogs = "https://dog.ceo/api/breeds/image/random/1";
+const apiRandomDogs = "https://dog.ceo/api/breeds/image/random/45";
 const apiAllBreeds = "https://dog.ceo/api/breeds/list/all";
 
 const main = document.getElementById("main");
@@ -52,6 +52,7 @@ window.addEventListener("load", () => {
   request2.send();
 });
 
+// 검색하기
 filterButton.addEventListener("click", () => {
   main.innerHTML = "";
   const filteredDogs = currentDogs.filter((item) => {
@@ -63,6 +64,7 @@ filterButton.addEventListener("click", () => {
   });
 });
 
+// 선택하기
 filterSelect.addEventListener("change", () => {
   main.innerHTML = "";
   const filteredDogs = currentDogs.filter((item) => {
@@ -73,6 +75,7 @@ filterSelect.addEventListener("change", () => {
   });
 });
 
+// 새로운 세트 불러오기
 reset.addEventListener("click", () => {
   request1 = new XMLHttpRequest();
   request1.open("get", apiRandomDogs);
@@ -82,10 +85,10 @@ reset.addEventListener("click", () => {
     parseResponse();
   });
   request1.send();
+  filterSelect.value = "All";
 });
 
-// !!!그냥 more 눌렀을때랑 reset 누른뒤 눌렀을때 반응이 다름
-
+// 더 불러오기
 more.addEventListener("click", () => {
   request1 = new XMLHttpRequest();
   request1.open("get", apiRandomDogs);
@@ -95,6 +98,7 @@ more.addEventListener("click", () => {
   request1.send();
 });
 
+// 맨 위로 이동
 tothetop.addEventListener("click", () => {
   window.scrollTo({ top: 0 });
 });

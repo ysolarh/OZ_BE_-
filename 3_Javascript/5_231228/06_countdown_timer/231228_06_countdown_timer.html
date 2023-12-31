@@ -10,21 +10,15 @@
   <body>
     <div class="container flex">
       <div id="timer" class="timer flex">
-        <div class="circle__wrap">
-          <svg class="circle__progress" cx="75" cy="75" r="75" stroke-width="12">
-            <circle class="frame" cx="75" cy="75" r="75" stroke-width="12"></circle>
-            <circle class="bar" cx="75" cy="75" r="75" stroke-width="12"></circle>
-          </svg>
-        </div>
         <div id="days" class="number"></div>
-
         <div id="hours" class="number"></div>
         <div id="minutes" class="number"></div>
         <div id="seconds" class="number"></div>
+        <!-- <canvas id="sec-progress">
+        </canvas> -->
       </div>
       <div class="buttons">
         <button class="start-btn">Start</button>
-        <!-- <button class="set-btn">Set</button> -->
       </div>
 
       <!-- start code -->
@@ -34,5 +28,6 @@
       </div>
     </div>
     <script src="231228_06_countdown_timer.js"></script>
+    <!-- <script type="module" src="231228_06_circle_progress.js"></script> -->
   </body>
 </html>

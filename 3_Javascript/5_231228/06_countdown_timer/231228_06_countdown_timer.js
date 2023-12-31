@@ -8,9 +8,12 @@ const setBtn = document.querySelector(".set-btn");
 
 function countdown(yy, mm, dd, hh) {
   const now = new Date();
-  const end = Date.parse(`${yy}/${mm}/${dd} ${hh}:00:00`);
-  const diff = end - now;
-  console.log(diff);
+  // const dday = Date.parse(`${yy}/${mm}/${dd} ${hh}:00:00`);
+  // const dday = new Date(yy, mm, dd, hh, 0, 0);
+  const dday = new Date(yy, mm, dd);
+  // console.log(now);
+  // console.log(dday);
+  const diff = dday - now;
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const mins = Math.floor(diff / (1000 * 60));
@@ -24,17 +27,29 @@ function countdown(yy, mm, dd, hh) {
   hourDiv.innerText = String(h).padStart(2, "0");
   minDiv.innerText = String(m).padStart(2, "0");
   secDiv.innerText = String(s).padStart(2, "0");
+
+  // console.log(days, h, m, s);
+
+  if (diff <= 0) {
+    clearInterval(intervalId);
+  }
 }
 
-setBtn.addEventListener("click", () => {
+// setBtn.addEventListener("click", () => {
+//   const y = prompt("년");
+//   const m = prompt("월");
+//   const d = prompt("일");
+//   const h = prompt("시");
+
+//   countdown(y, m, d, h);
+// });
+
+let intervalId;
+startBtn.addEventListener("click", () => {
   const y = prompt("년");
   const m = prompt("월");
   const d = prompt("일");
-  const h = prompt("시");
+  // const h = prompt("시");
 
-  countdown(y, m, d, h);
-});
-
-startBtn.addEventListener("click", () => {
-  setInterval(countdown, 1000);
+  intervalId = setInterval(countdown, 1000, y, m - 1, d);
 });

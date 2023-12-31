@@ -1,7 +1,6 @@
 const apiRandomDogs = "https://dog.ceo/api/breeds/image/random/1";
 const apiAllBreeds = "https://dog.ceo/api/breeds/list/all";
 
-// const header = document.getElementById("header");
 const main = document.getElementById("main");
 const filterInput = document.getElementById("filter-text");
 const filterButton = document.getElementById("filter-button");
@@ -12,7 +11,6 @@ const tothetop = document.getElementById("tothetop");
 
 let request1;
 let request2;
-
 let currentDogs = [];
 
 function displayDogs(item) {
@@ -22,34 +20,22 @@ function displayDogs(item) {
   main.appendChild(dogImgDiv);
 }
 
-// function sendRequest1() {
-//   request1.open("get", apiRandomDogs);
-//   request1.addEventListener("load", () => {
-//     const response = JSON.parse(request1.response);
-//     // main.innerHTML = "";
-//     // currentDogs = [];
-//     response.message.forEach((item) => {
-//       currentDogs.push(item);
-//       displayDogs(item);
-//     });
-//   });
-//   request1.send();
-// }
+function parseResponse() {
+  const response = JSON.parse(request1.response);
+  response.message.forEach((item) => {
+    currentDogs.push(item);
+    displayDogs(item);
+  });
+}
 
 window.addEventListener("load", () => {
   // 개 사진 불러오기
   request1 = new XMLHttpRequest();
   request1.open("get", apiRandomDogs);
   request1.addEventListener("load", () => {
-    const response = JSON.parse(request1.response);
-    response.message.forEach((item) => {
-      console.log("load", item);
-      currentDogs.push(item);
-      displayDogs(item);
-    });
+    parseResponse();
   });
   request1.send();
-  // sendRequest1();
 
   // select에 견종 채우기
   request2 = new XMLHttpRequest();
@@ -88,20 +74,12 @@ filterSelect.addEventListener("change", () => {
 });
 
 reset.addEventListener("click", () => {
-  // currentDogs = currentDogs.splice(0);
-  // console.log(currentDogs.length, currentDogs);
-  // sendRequest1();
   request1 = new XMLHttpRequest();
   request1.open("get", apiRandomDogs);
   request1.addEventListener("load", () => {
-    const response = JSON.parse(request1.response);
     main.innerHTML = "";
     currentDogs = [];
-    response.message.forEach((item) => {
-      console.log("reset", item);
-      currentDogs.push(item);
-      displayDogs(item);
-    });
+    parseResponse();
   });
   request1.send();
 });
@@ -111,17 +89,8 @@ reset.addEventListener("click", () => {
 more.addEventListener("click", () => {
   request1 = new XMLHttpRequest();
   request1.open("get", apiRandomDogs);
-  // console.log(currentDogs.length, currentDogs);
   request1.addEventListener("load", () => {
-    const response = JSON.parse(request1.response);
-    // main.innerHTML = "";
-    // currentDogs = [];
-    response.message.forEach((item) => {
-      console.log("more", item);
-      currentDogs.push(item);
-      displayDogs(item);
-    });
-    // console.log(currentDogs.length, currentDogs);
+    parseResponse();
   });
   request1.send();
 });

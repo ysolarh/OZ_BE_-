@@ -24,7 +24,6 @@ function countdown(yy, mm, dd, hh) {
   const mins = m - h * 60;
   const secs = s - m * 60;
 
-  // currTime.innerText = `현재 날짜와 시간: ${now}`;
   dayDiv.innerText = String(days).padStart(2, "0");
   hourDiv.innerText = String(hours).padStart(2, "0");
   minDiv.innerText = String(mins).padStart(2, "0");
@@ -38,7 +37,7 @@ function countdown(yy, mm, dd, hh) {
 }
 
 let intervalId;
-// let intervalId2;
+
 startBtn.addEventListener("click", () => {
   alert("D-day를 입력해주세요.");
   const y = prompt("년");
@@ -50,5 +49,4 @@ startBtn.addEventListener("click", () => {
     clearInterval(intervalId);
   }
   intervalId = setInterval(countdown, 1000, y, m - 1, d, h);
-  // intervalId2 = setInterval(fillTimer, 1000);
 });

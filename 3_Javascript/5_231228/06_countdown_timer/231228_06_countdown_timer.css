@@ -38,27 +38,29 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px;
-  /* box-shadow: inset 0 0 3px 3px rgba(50, 50, 50, 0.7); */
+  box-shadow: inset 0 0 5px 5px rgba(100, 100, 100, 0.7);
 }
 #days {
   position: relative;
-  animation: moving 86400s 0s ease-in infinite;
+  /* animation: moving 86400s 0s ease-in infinite; */
+  animation: moving 1.3s 0.7s ease-out infinite alternate;
   animation-play-state: paused;
 }
 #hours {
   position: relative;
-  animation: moving 3600s 0s ease-in infinite;
+  /* animation: moving 3600s 0s ease-in infinite; */
+  animation: moving 1.1s 0.3s ease infinite alternate;
   animation-play-state: paused;
 }
 #minutes {
   position: relative;
-  animation: moving 60s 0s ease-in infinite;
+  /* animation: moving 60s 0s ease-in infinite; */
+  animation: moving 1.5s 0.5s ease-in infinite alternate;
   animation-play-state: paused;
 }
 #seconds {
   position: relative;
-  /* top: 300px; */
-  animation: moving 1s 0s alternate ease-in-out infinite;
+  animation: moving 1s 0s ease-in-out infinite alternate;
   animation-play-state: paused;
 }
 @keyframes moving {
@@ -79,12 +81,11 @@ button {
   border: none;
   cursor: pointer;
   margin: 20px;
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.7);
 }
 button:active {
   transform: scale(1.1);
 }
-
-/* start code */
 .footer {
   font-size: 12px;
   text-align: center;

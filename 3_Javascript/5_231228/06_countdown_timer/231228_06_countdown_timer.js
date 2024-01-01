@@ -50,10 +50,5 @@ startBtn.addEventListener("click", () => {
     clearInterval(intervalId);
   }
   intervalId = setInterval(countdown, 1000, y, m - 1, d, h);
-  minDiv.style.top = 500 + "px";
-  console.log(secs);
-  // minDiv.style.top = (secs / 60) * 100 + "%";
-  // hourDiv.style.top = `(${mins} / 60 * 100)%`;
-  // dayDiv.style.top = `(${hours} / 24 * 100)%`;
   animationState("running");
 });

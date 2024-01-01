@@ -16,17 +16,22 @@ body {
   justify-content: center;
   width: 100%;
   margin: auto;
+  background-color: #000000;
 }
 .timer {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  /* height: 300px; */
+  height: 500px;
+  max-width: fit-content;
+  border-bottom: 1px solid #ffffff;
 }
 .number {
   font-size: 100px;
-  border: 1px solid black;
+  color: #ffffff;
+  border: 5px solid #ffffff;
   border-radius: 50%;
+  border-style: solid dashed;
   width: 150px;
   height: 150px;
   display: flex;
@@ -36,11 +41,37 @@ body {
   /* box-shadow: inset 0 0 3px 3px rgba(50, 50, 50, 0.7); */
 }
 #days {
+  position: relative;
+  animation: moving 86400s 0s ease-in infinite;
+  animation-play-state: paused;
 }
-
+#hours {
+  position: relative;
+  animation: moving 3600s 0s ease-in infinite;
+  animation-play-state: paused;
+}
+#minutes {
+  position: relative;
+  animation: moving 60s 0s ease-in infinite;
+  animation-play-state: paused;
+}
+#seconds {
+  position: relative;
+  /* top: 300px; */
+  animation: moving 1s 0s alternate ease-in-out infinite;
+  animation-play-state: paused;
+}
+@keyframes moving {
+  from {
+    top: 0;
+  }
+  to {
+    top: 370px;
+  }
+}
 button {
-  background-color: black;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -57,8 +88,9 @@ button:active {
 .footer {
   font-size: 12px;
   text-align: center;
+  color: #ffffff;
 }
 .footer a {
-  color: hsl(282, 100%, 21%);
+  color: hsl(282, 100%, 50%);
   text-decoration: none;
 }

@@ -7,14 +7,11 @@ const startBtn = document.querySelector(".start-btn");
 const setBtn = document.querySelector(".set-btn");
 
 let days, hours, mins, secs;
+let intervalId;
 
 function countdown(yy, mm, dd, hh) {
   const now = new Date();
-  // const dday = Date.parse(`${yy}/${mm}/${dd} ${hh}:00:00`);
-  // const dday = new Date(yy, mm, dd, hh, 0, 0);
   const dday = new Date(yy, mm, dd, hh);
-  // console.log(now);
-  // console.log(dday);
   const diff = dday - now;
   days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const h = Math.floor(diff / (1000 * 60 * 60));
@@ -29,30 +26,11 @@ function countdown(yy, mm, dd, hh) {
   minDiv.innerText = String(mins).padStart(2, "0");
   secDiv.innerText = String(secs).padStart(2, "0");
 
-  // console.log(days, hours, mins, secs);
-  // animationStart();
-
   if (diff <= 1) {
     clearInterval(intervalId);
     animationState("paused");
   }
 }
-
-// function animationStart() {
-//   console.log(1);
-//   secDiv.animate([{ top: 0 }, { bottom: "100%" }], {
-//     duration: 1000,
-//     easing: "ease-in-out",
-//     direction: "alternate",
-//     iteration: "infinite",
-//   });
-//   minDiv.animate([{ top: 0 }, { bottom: "100%" }], {
-//     duration: 1000,
-//     easing: "ease-in-out",
-//     direction: "alternate",
-//     iteration: "infinite",
-//   });
-// }
 
 function animationState(state) {
   secDiv.style.animationPlayState = state;
@@ -60,8 +38,6 @@ function animationState(state) {
   hourDiv.style.animationPlayState = state;
   dayDiv.style.animationPlayState = state;
 }
-
-let intervalId;
 
 startBtn.addEventListener("click", () => {
   alert("D-day를 입력해주세요.");
@@ -80,5 +56,4 @@ startBtn.addEventListener("click", () => {
   // hourDiv.style.top = `(${mins} / 60 * 100)%`;
   // dayDiv.style.top = `(${hours} / 24 * 100)%`;
   animationState("running");
-  // animationStart();
 });

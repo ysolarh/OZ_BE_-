@@ -13,6 +13,17 @@ function countdown(yy, mm, dd, hh) {
   const now = new Date();
   const dday = new Date(yy, mm, dd, hh);
   const diff = dday - now;
+
+  if (diff <= 0) {
+    clearInterval(intervalId);
+    animationState("paused");
+    dayDiv.innerText = "00";
+    hourDiv.innerText = "00";
+    minDiv.innerText = "00";
+    secDiv.innerText = "00";
+    return;
+  }
+
   days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const h = Math.floor(diff / (1000 * 60 * 60));
   const m = Math.floor(diff / (1000 * 60));
@@ -25,11 +36,6 @@ function countdown(yy, mm, dd, hh) {
   hourDiv.innerText = String(hours).padStart(2, "0");
   minDiv.innerText = String(mins).padStart(2, "0");
   secDiv.innerText = String(secs).padStart(2, "0");
-
-  if (diff <= 1) {
-    clearInterval(intervalId);
-    animationState("paused");
-  }
 }
 
 function animationState(state) {

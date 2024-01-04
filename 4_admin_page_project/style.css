@@ -47,6 +47,7 @@ form {
   background-color: var(--color1);
   border: none;
   box-shadow: 0 0 0 3px var(--color3);
+  font-weight: 300;
 }
 .form-input {
   width: 170px;
@@ -58,6 +59,7 @@ form {
   background-color: var(--color1);
   border: none;
   box-shadow: 0 0 0 3px var(--color3);
+  font-weight: 300;
 }
 .form-input::placeholder {
   color: var(--color0);

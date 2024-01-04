@@ -1,0 +1,127 @@
+:root {
+  --color1: #060606;
+  --color2: #152127;
+  --color3: #324051;
+  --color4: #4f6d84;
+  --color5: #7497b7;
+  --color6: #f8f8f8;
+}
+body {
+  background-color: var(--color3);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 50px; */
+}
+h3 {
+  color: var(--color6);
+  text-shadow: -2px 0px var(--color2), 0px 3px var(--color2), 3px 0px var(--color2), 0px -2px var(--color2);
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 24px;
+}
+.form-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 24px;
+}
+.category {
+  margin-right: 10px;
+}
+.form-select {
+  border: 3px solid var(--color2);
+}
+/* .search {
+  width: 150px;
+  height: 38px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+} */
+.form-input {
+  /* width: 100%; */
+  /* height: 100%; */
+  width: 170px;
+  height: 41px;
+  /* line-height: 38px; */
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  border: 3px solid var(--color2);
+  text-align: center;
+}
+/* .form-btn {
+  width: 70px;
+  height: 38px;
+  list-style-type: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+} */
+.btn-info {
+  background-color: var(--color5);
+  /* border-color: var(--color1); */
+  color: var(--color6);
+  border: 3px solid var(--color2);
+}
+.form-btn:hover {
+  border-color: var(--color1);
+  background-color: var(--color4);
+}
+.del-btn:hover {
+  border-color: var(--color1);
+  background-color: var(--color3);
+}
+table {
+  border: 3px solid var(--color2);
+  border-radius: 5px;
+  /* border-collapse: collapse; */
+  /* border-style: hidden; */
+  /* box-shadow: 0 0 0 1px #000; */
+  background-color: var(--color5);
+  text-align: center;
+}
+thead,
+tbody {
+  border: 3px solid var(--color2);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination-nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.pagination {
+  border: 3px solid var(--color2);
+  border-radius: 7px;
+}
+.pagination li > a {
+  color: var(--color1);
+}
+.github-icon {
+  border-radius: 7px;
+  height: 38px;
+}
+
+.github-icon a i {
+  /* border: 3px solid var(--color2); */
+  border-radius: 7px;
+  line-height: 38px;
+  font-size: 38px;
+  margin: 0;
+  padding: 0;
+  color: var(--color5);
+}

@@ -1,10 +1,10 @@
 :root {
-  --color1: #060606;
-  --color2: #152127;
-  --color3: #324051;
-  --color4: #4f6d84;
-  --color5: #7497b7;
   --color0: #f8f8f8;
+  --color1: rgba(255, 255, 255, 0.2);
+  --color2: rgba(255, 255, 255, 0.3);
+  --color3: rgba(0, 0, 0, 0.1);
+  /* --colorP: #55608f; */
+  --colorP: #4942e4;
 }
 * {
   color: var(--color0);
@@ -12,20 +12,17 @@
 html,
 body {
   height: 100%;
-  /* background-color: var(--color3); */
-  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
+  background: linear-gradient(0deg, #fae7f3, #11009e);
   font-family: sans-serif;
-  /* font-weight: 100; */
 }
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-bottom: 50px; */
 }
 h3 {
   color: var(--color0);
-  /* text-shadow: -2px 0px var(--color2), 0px 3px var(--color2), 3px 0px var(--color2), 0px -2px var(--color2); */
 }
 form {
   display: flex;
@@ -46,11 +43,10 @@ form {
   color: var(--color0);
 }
 .form-select {
-  /* border: 3px solid var(--color2); */
-  color: var(--color6);
-  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color0);
+  background-color: var(--color1);
   border: none;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px var(--color3);
 }
 .form-input {
   width: 170px;
@@ -58,64 +54,46 @@ form {
   border-radius: 5px;
   margin-right: 5px;
   padding: 0;
-  /* border: 3px solid var(--color2); */
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color1);
   border: none;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px var(--color3);
 }
 .form-input::placeholder {
   color: var(--color0);
 }
 .btn-info {
-  /* background-color: var(--color5); */
-  background-color: #55608f;
+  background-color: var(--colorP);
   color: var(--color6);
-  /* border: 1px solid var(--color2); */
   border: none;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px var(--color3);
 }
 .btn-info:hover {
-  /* border-color: var(--color1); */
-  /* background-color: var(--color4); */
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color2);
+  color: var(--color0);
 }
-/* .del-btn:hover { */
-/* border-color: var(--color1); */
-/* background-color: var(--color3); */
-/* background-color: rgba(255, 255, 255, 0.3); */
-/* } */
 .main {
   position: relative;
   z-index: 1;
 }
 #table {
   width: 100%;
-  /* height: 150px; */
-  /* border: 3px solid var(--color2); */
   border-radius: 5px;
   border-collapse: collapse;
-  /* border-style: hidden; */
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-  /* background-color: var(--color5); */
+  box-shadow: 0 0 0 10px var(--color3);
   text-align: center;
   line-height: 38px;
   overflow: hidden;
   margin: 20px 0;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-thead,
-tbody {
-  /* border: 3px solid var(--color2); */
-  color: #fff;
+  background-color: var(--color1);
 }
 thead {
-  background-color: #55608f;
+  background-color: var(--colorP);
 }
 tbody {
   tr {
     &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: var(--color2);
     }
   }
   td {
@@ -128,7 +106,7 @@ tbody {
         right: 0;
         top: -9999px;
         bottom: -9999px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: var(--color1);
         z-index: -1;
       }
     }
@@ -137,7 +115,7 @@ tbody {
 input[type="checkbox"] {
   transform: scale(1.5);
   cursor: pointer;
-  accent-color: rgba(255, 255, 255, 0.2);
+  accent-color: var(--color1);
 }
 .footer {
   display: flex;
@@ -149,33 +127,29 @@ input[type="checkbox"] {
   align-items: center;
 }
 .pagination {
-  /* border: 3px solid var(--color2); */
   border-radius: 7px;
   color: var(--color0);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px var(--color3);
 }
 .pagination li > a {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color1);
   border: none;
   color: var(--color0);
 }
 .pagination li > a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color2);
   color: var(--color0);
 }
 .github-icon {
   border-radius: 7px;
   height: 38px;
 }
-
 .github-icon a i {
-  /* border: 3px solid var(--color2); */
   border-radius: 7px;
   line-height: 35px;
   font-size: 38px;
   margin: 0;
   padding: 0;
-  /* color: var(--color5); */
-  color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  color: var(--color2);
+  box-shadow: 0 0 0 3px var(--color3);
 }

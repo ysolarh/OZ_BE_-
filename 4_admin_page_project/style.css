@@ -74,6 +74,11 @@ form {
   background-color: var(--color2);
   color: var(--color0);
 }
+#search-btn:active,
+#del-btn:active {
+  background-color: var(--color1);
+  color: var(--color0);
+}
 .main {
   position: relative;
   z-index: 1;

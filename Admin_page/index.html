@@ -45,11 +45,12 @@
         </div>
       </form>
     </div>
-    <div class="container mt-3">
-      <table class="table table-sm">
+    <div class="main container mt-3">
+      <table id="table" class="table-sm">
         <thead>
           <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
           <tr>
+            <th scope="col">선택</th>
             <th scope="col">카테고리</th>
             <th scope="col">브랜드</th>
             <th scope="col">상품명</th>
@@ -91,7 +92,7 @@
         { category: "상의", brand: "Supreme", product: "슈프림 박스로고 후드티", price: "390,000" },
         { category: "하의", brand: "DIESEL", product: "디젤 트랙 팬츠", price: "188,000" },
         { category: "신발", brand: "Nike", product: "에어포스 1", price: "137,000" },
-        { category: "패션잡화", brand: "Music&Goods", product: "빵빵이 키링", price: "29,000" },
+        { category: "패션잡화", brand: "Music&Goods", product: "키링", price: "29,000" },
         // ...
       ];
 
@@ -104,10 +105,11 @@
       ).padStart(2, "0")}`;
       data.forEach((item) => {
         const row = dataTable.insertRow();
-        row.insertCell(0).innerHTML = item.category;
-        row.insertCell(1).innerHTML = item.brand;
-        row.insertCell(2).innerHTML = item.product;
-        row.insertCell(3).innerHTML = item.price;
+        row.insertCell(0).innerHTML = "<input type='checkbox'>";
+        row.insertCell(1).innerHTML = item.category;
+        row.insertCell(2).innerHTML = item.brand;
+        row.insertCell(3).innerHTML = item.product;
+        row.insertCell(4).innerHTML = item.price;
       });
     </script>
     <script

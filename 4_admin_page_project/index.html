@@ -92,9 +92,9 @@
       const dataTable = document.getElementById("data-table");
 
       const today = new Date();
-      dateH3.innerHTML = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(
-        today.getDate()
-      ).padStart(2, "0")}`;
+      dateH3.innerHTML = `${today.getFullYear()}
+                        -${String(today.getMonth() + 1).padStart(2, "0")}
+                        -${String(today.getDate()).padStart(2, "0")}`;
       data.forEach((item) => {
         const row = dataTable.insertRow();
         row.insertCell(0).innerHTML = "<input type='checkbox'>";

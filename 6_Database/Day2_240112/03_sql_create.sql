@@ -1,3 +1,5 @@
+USE classicmodels;
+
 # 초급
 -- 1
 INSERT INTO customers (customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, city, country)

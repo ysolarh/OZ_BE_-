@@ -1,6 +1,6 @@
 USE classicmodels;
 
---기본 조회 및 필터링
+-- 기본 조회 및 필터링
 --	고객 목록 조회
 SELECT * FROM customers;
 
@@ -17,7 +17,7 @@ LIMIT 10;
 SELECT * FROM payments
 WHERE amout >= 100;
 
---조인 쿼리
+-- 조인 쿼리
 --	주문과 고객 정보 조합
 SELECT o.orderNumber, c.customerName
 FROM orders o
@@ -39,19 +39,83 @@ FROM employees e
 JOIN offices o ON e.officeCode = o.officeCode
 WHERE o.city = 'San Francisco';
 
---그룹쿼리
+-- 그룹쿼리
 --	제품 라인별 제품 수
---	고객별 총 주문 금액
---	가장 많이 팔린 제품
---	매출이 가장 높은 사무실
---서브쿼리
---	특정 금액 이상의 주문
---	평균 이상 결제 고객
---	주문 없는 고객
---	최대 매출 고객
---데이터 수정 및 관리
---	신규 고객 추가
---	제품 가격 변경
---	고객 데이터 업데이트
---	직원 정보
+SELECT productLine, COUNT(*) AS productCount
+FROM products
+GROUP BY productLine;
 
+--	고객별 총 주문 금액
+SELECT customers.customerNumber,
+       customers.customerName,
+       SUM(orderdetails.quantityOrdered * orderdetails.priceEach) AS totalAmount
+FROM customers
+JOIN orders ON customers.customerNumber = orders.customerNumber
+JOIN orderdetails ON orders.orderNumber = orderdetails.orderNumber
+GROUP BY customers.customerNumber, customers.customerName;
+
+--	가장 많이 팔린 제품
+SELECT productName, SUM(quantityOrdered) AS totalQuantity
+FROM orderdetails od
+JOIN products p ON od.productCode = p.productCode
+GROUP BY productName
+ORDER BY totalQuantity DESC
+LIMIT 1;
+
+--	매출이 가장 높은 사무실
+SELECT o.city, SUM(od.quantityOrdered * od.priceEach) AS totalSales
+FROM orders ord
+JOIN orderdetails od ON ord.orderNumber = od.orderNumber
+JOIN customers c ON ord.customerNumber = c.customerNumber
+JOIN employees e ON c.salesRepEmployeeNumber = e.employeeNumber
+JOIN offices o ON e.officeCode = o.officeCode
+GROUP BY o.city
+ORDER BY totalSales DESC
+LIMIT 1;
+
+-- 서브쿼리
+--	특정 금액 이상의 주문
+SELECT orderNumber, SUM(quantityOrdered * priceEach) AS totalAmount
+FROM orderdetails
+GROUP BY orderNumber
+HAVING totalAmount > 500;
+
+--	평균 이상 결제 고객
+SELECT customerNumber, SUM(amount) AS totalPayment
+FROM payments
+GROUP BY customerNumber
+HAVING totalPayment > (SELECT AVG(amount) FROM payments);
+
+--	주문 없는 고객
+SELECT customerName
+FROM customers
+WHERE customerNumber NOT IN (SELECT customerNumber FROM orders);
+
+--	최대 매출 고객
+SELECT c.customerName, SUM(od.quantityOrdered * od.priceEach) AS totalSpent
+FROM customers c
+JOIN orders o ON c.customerNumber = o.customerNumber
+JOIN orderdetails od ON o.orderNumber = od.orderNumber
+GROUP BY c.customerName
+ORDER BY totalSpent DESC
+LIMIT 1;
+
+-- 데이터 수정 및 관리
+--	신규 고객 추가
+INSERT INTO customers (customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit)
+VALUES (497, 'New Customer', 'Lastname', 'Firstname', '123-456-7890', '123 Street', 'Suite 1', 'City', 'State', 'PostalCode', 'Country', 1002, 50000.00);
+
+--	제품 가격 변경
+UPDATE products
+SET buyPrice = buyPrice * 1.10
+WHERE productLine = 'Classic Cars';
+
+--	고객 데이터 업데이트
+UPDATE customers
+SET postalCode = '10203'
+WHERE customerNumber = 103;
+
+--	직원 정보
+UPDATE employees
+SET officeCode = '2'
+WHERE employeeNumber = 1002;

@@ -20,14 +20,37 @@ body {
   font-family: sans-serif;
   overflow: scroll;
 }
+.container {
+  width: 100%;
+}
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+}
+.title-section {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 h3 {
   color: var(--color0);
 }
+.title,
+.date {
+  /* position: fixed; */
+}
+.main {
+  position: relative;
+  z-index: 1;
+}
+/* .graph-section {
+  position: fixed;
+} */
 .graph-fold {
   background-color: var(--colorP);
   color: var(--color6);
@@ -46,6 +69,12 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+}
+.main {
+  position: relative;
+  top: 500px;
+  overflow: scroll;
+  height: 100%;
 }
 form {
   display: flex;
@@ -108,10 +137,6 @@ form {
   background-color: var(--color1);
   color: var(--color0);
 }
-.main {
-  position: relative;
-  z-index: 1;
-}
 #table {
   width: 100%;
   border-radius: 5px;
@@ -159,10 +184,15 @@ a:visited {
   text-decoration: none;
 }
 .footer {
+  position: fixed;
+  bottom: 10px;
+  z-index: 2;
+  width: 700px;
+}
+.footer-wrap {
   display: flex;
   justify-content: space-between;
-  /* position: fixed; */
-  bottom: 20px;
+  width: 100%;
 }
 .pagination-nav {
   display: flex;

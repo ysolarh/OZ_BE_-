@@ -1,3 +1,6 @@
 [submodule "4_Web_scraping/Scraping_study"]
 	path = 4_Web_scraping/Scraping_study
 	url = https://github.com/ysolarh/Scraping_study
+[submodule "6_mini_project_webscraping/Fruitsfamily-project"]
+	path = 6_mini_project_webscraping/Fruitsfamily-project
+	url = https://github.com/ysolarh/Fruitsfamily-project

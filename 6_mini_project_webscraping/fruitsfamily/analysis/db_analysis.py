@@ -50,7 +50,6 @@ class DBAnalysis:
         count_list.append(self.get_count_by_price(price_range[-1], sys.maxsize))
         return count_list
 
-
 # print(DBAnalysis().get_categories()) # debug
 # print(DBAnalysis().get_count_by_brand("dior"))
 # print(DBAnalysis().get_counts_by_price_range())

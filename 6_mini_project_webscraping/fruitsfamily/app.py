@@ -1,6 +1,7 @@
 from data.collecting.crawling import Crawling
 from data.database.db_save import FruitsDB
 
+
 # from analysis.graph import ShowGraph
 
 class Application:
@@ -15,7 +16,6 @@ class Application:
             self.datas = crawling.crawl()
             fruits_db.save_db(self.datas)
             # ShowGraph().show_by_category() # debug
-
 
 
 if __name__ == "__main__":

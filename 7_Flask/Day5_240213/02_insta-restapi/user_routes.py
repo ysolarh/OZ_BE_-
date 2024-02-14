@@ -1,6 +1,7 @@
 from flask import request
 from user_model import users, add_user, add_post_to_user, get_user_posts, like_user_post, delete_user
 
+
 def register_routes(app):
     @app.route("/users", methods=["GET", "POST"])
     def users_route():

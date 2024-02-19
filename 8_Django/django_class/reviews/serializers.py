@@ -1,7 +1,6 @@
 from rest_framework.serializers import ModelSerializer
-
-from users.serializers import FeedUserSerializer
 from .models import Review
+from users.serializers import FeedUserSerializer
 
 
 class ReviewSerializer(ModelSerializer):

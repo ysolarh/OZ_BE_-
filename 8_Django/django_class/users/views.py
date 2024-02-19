@@ -39,7 +39,7 @@ class MyInfo(APIView):
 
     def put(self, request):
         user = request.user
-        serializer = MyInfoUserSerializer(user, data=request.data, partial=True) # user는 왜?
+        serializer = MyInfoUserSerializer(user, data=request.data, partial=True)
         if serializer.is_valid():
             user = serializer.save()
             serializer = MyInfoUserSerializer(user)

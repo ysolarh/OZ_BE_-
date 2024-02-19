@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.exceptions import NotFound, NotAuthenticated
+from rest_framework.exceptions import NotFound
 from .models import Review
 from .serializers import ReviewSerializer
 
@@ -17,7 +17,7 @@ class ReviewDetail(APIView):
     def get(self, request, review_id):
         try:
             review = Review.objects.get(id=review_id)
-        except Review.DoesNotExist:
+        except:
             raise NotFound
 
         serializer = ReviewSerializer(review)

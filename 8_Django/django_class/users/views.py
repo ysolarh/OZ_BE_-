@@ -8,6 +8,9 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth import authenticate, login, logout
 from rest_framework import status
+import jwt
+from django.conf import settings
+from config.authentication import JWTAuthentication
 
 
 class Users(APIView):
@@ -67,17 +70,41 @@ class Login(APIView):
             return Response(status=status.HTTP_403_FORBIDDEN)
 
 
-# class Logout(APIView):
-#     permission_classes = [IsAuthenticated]
-#
-#     def post(self, request):
-#         print("request", request.header)
-#         logout(request)
-#         return Response(status=status.HTTP_200_OK)
 class Logout(APIView):
-    permission_classes = [IsAuthenticated]  # 실제로 로그인한 유저인지
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        print("header: ", request.headers)
         logout(request)
         return Response(status=status.HTTP_200_OK)
+
+
+class JWTLogin(APIView):
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        if not username or not password:
+            raise ParseError()
+
+        user = authenticate(request, username=username, password=password)
+
+        if user:
+            payload = {"id": user.id, "username": user.username}
+            token = jwt.encode(
+                payload,
+                settings.SECRET_KEY,
+                algorithm="HS256",
+            )
+            return Response({"token": token})
+
+
+class UserDetailView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        return Response({
+            "id": user.id,
+            "username": user.username
+        })

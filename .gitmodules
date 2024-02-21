@@ -4,3 +4,6 @@
 [submodule "6_mini_project_webscraping/Fruitsfamily-project"]
 	path = 6_mini_project_webscraping/Fruitsfamily-project
 	url = https://github.com/ysolarh/Fruitsfamily-project
+[submodule "8_Django/oz_django_youtube"]
+	path = 8_Django/oz_django_youtube
+	url = https://github.com/ysolarh/oz_django_youtube

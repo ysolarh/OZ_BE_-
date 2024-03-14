@@ -7,3 +7,6 @@
 [submodule "8_Django/oz_django_youtube"]
 	path = 8_Django/oz_django_youtube
 	url = https://github.com/ysolarh/oz_django_youtube
+[submodule "9_FastAPI/oz_fastapi_class"]
+	path = 9_FastAPI/oz_fastapi_class
+	url = https://github.com/ysolarh/oz_fastapi_class

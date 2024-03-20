@@ -1,20 +1,5 @@
-# 과제 5. 파일과 메모리
-불연속할당 설명 시에 언급했던 '연결리스트' 자료구조에 대해 조사하고 정리해보자.
-C언어를 이용해 연결리스트를 구현하는 예제까지 함께 첨부해서 마무리하자!
+#include "linked_list.h"
 
-### 연결리스트
-
-
-
-``` c
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
-```
-
-``` c
 t_list	*lstnew(void *content)
 {
 	t_list	*new;
@@ -103,5 +88,3 @@ t_list	*lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
-```

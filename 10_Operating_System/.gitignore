@@ -1,4 +1,3 @@
-# .prettierignore
 .vscode/
 .idea/
 *.out

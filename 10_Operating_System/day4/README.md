@@ -28,5 +28,6 @@ CPU 사용률이 떨어지면 운영체제는 더 많은 프로세스를 메모�
     
 
 #### 참고 글
-  https://m.blog.naver.com/qbxlvnf11/221391441436
+  https://m.blog.naver.com/qbxlvnf11/221391441436  
   https://chanyoung-dev.github.io/CS/OS/workingset/
+  
